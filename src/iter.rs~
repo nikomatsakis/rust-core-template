@@ -1,0 +1,8 @@
+trait IntoIterator {
+    type Iter: Iterator;
+    fn into_iter(self) -> Self::Iter;
+}
+
+fn foo<T: IntoIterator>(t: T) -> T::Iter {
+    t.into_iter()
+}

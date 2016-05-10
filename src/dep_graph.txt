@@ -1,0 +1,200 @@
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> CoherenceOverlapCheckSpecial(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> MatchCheck(DefId { krate: 0, node: DefIndex(3) => core })
+ItemSignature(DefId { krate: 1, node: DefIndex(15) }) -> CheckConst(DefId { krate: 0, node: DefIndex(5) => bar })
+CoherenceCheckImpl(DefId { krate: 0, node: DefIndex(3) => core }) -> Coherence
+ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar }) -> CollectItem(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(4) => crate1 })
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> MetaData(DefId { krate: 0, node: DefIndex(0) =>  })
+ReprHints(DefId { krate: 2, node: DefIndex(4) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> TypeckItemType(DefId { krate: 0, node: DefIndex(3) => core })
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> MetaData(DefId { krate: 0, node: DefIndex(0) =>  })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> BorrowCheck(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> DeadCheck
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> IntrinsicCheck(DefId { krate: 0, node: DefIndex(3) => core })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> StabilityCheck
+MetaData(DefId { krate: 2, node: DefIndex(4) }) -> ReprHints(DefId { krate: 2, node: DefIndex(4) })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> WfCheck(DefId { krate: 0, node: DefIndex(3) => core })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> CoherenceOrphanCheck(DefId { krate: 0, node: DefIndex(5) => bar })
+Krate -> StabilityCheck
+IntrinsicUseCheck -> TransCrate
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(3) => core })
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> CoherenceCheckImpl(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> TypeckItemType(DefId { krate: 0, node: DefIndex(5) => bar })
+MetaData(DefId { krate: 0, node: DefIndex(0) =>  }) -> TransCrate
+Krate -> EffectCheck
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> CoherenceCheckImpl(DefId { krate: 0, node: DefIndex(4) => crate1 })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> BorrowCheck(DefId { krate: 0, node: DefIndex(3) => core })
+MetaData(DefId { krate: 0, node: DefIndex(5) => bar }) -> TransCrate
+Krate -> StabilityIndex
+TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar }) -> TransCrate
+ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar }) -> MetaData(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> MetaData(DefId { krate: 0, node: DefIndex(0) =>  })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> CoherenceOverlapCheckSpecial(DefId { krate: 0, node: DefIndex(3) => core })
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> TypeckItemType(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar }) -> MirTypeck(DefId { krate: 0, node: DefIndex(5) => bar })
+Krate -> RegionResolveCrate
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> StabilityIndex
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> DeadCheck
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> DeadCheck
+TypeckItemBody(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(4) => crate1 })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> LateLintCheck
+Krate -> CrateReader
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> RvalueCheck(DefId { krate: 0, node: DefIndex(4) => crate1 })
+ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar }) -> Liveness
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> MatchCheck(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+Krate -> LateLintCheck
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> Privacy
+TransCrateItem(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> TransCrate
+Krate -> Liveness
+ItemSignature(DefId { krate: 2, node: DefIndex(7) }) -> LateLintCheck
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> CoherenceOrphanCheck(DefId { krate: 0, node: DefIndex(3) => core })
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> BorrowCheck(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> Liveness
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> TypeckItemBody(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> TransCrate
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> TypeckItemBody(DefId { krate: 0, node: DefIndex(4) => crate1 })
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> TransCrate
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> TransCrate
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> MirTypeck(DefId { krate: 0, node: DefIndex(5) => bar })
+ImplOrTraitItems(DefId { krate: 2, node: DefIndex(7) }) -> LateLintCheck
+Krate -> TransCrate
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> CollectItem(DefId { krate: 0, node: DefIndex(4) => crate1 })
+Krate -> Resolve
+MetaData(DefId { krate: 1, node: DefIndex(15) }) -> ItemSignature(DefId { krate: 1, node: DefIndex(15) })
+MetaData(DefId { krate: 2, node: DefIndex(7) }) -> TransInlinedItem(DefId { krate: 2, node: DefIndex(7) })
+ItemSignature(DefId { krate: 2, node: DefIndex(4) }) -> TransInlinedItem(DefId { krate: 2, node: DefIndex(7) })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> CollectItem(DefId { krate: 0, node: DefIndex(5) => bar })
+MetaData(DefId { krate: 1, node: DefIndex(52) }) -> Resolve
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> TransCrate
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> Resolve
+MetaData(DefId { krate: 1, node: DefIndex(51) }) -> Resolve
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> Privacy
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> CoherenceCheckImpl(DefId { krate: 0, node: DefIndex(5) => bar })
+CoherenceOverlapCheckSpecial(DefId { krate: 0, node: DefIndex(5) => bar }) -> Coherence
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> CoherenceOrphanCheck(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> CoherenceOrphanCheck(DefId { krate: 0, node: DefIndex(4) => crate1 })
+MetaData(DefId { krate: 1, node: DefIndex(22) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> MirMapConstruction(DefId { krate: 0, node: DefIndex(4) => crate1 })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> CollectItem(DefId { krate: 0, node: DefIndex(3) => core })
+TransInlinedItem(DefId { krate: 2, node: DefIndex(7) }) -> ItemSignature(DefId { krate: 0, node: DefIndex(7) => crate1::some_code })
+MetaData(DefId { krate: 1, node: DefIndex(9) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+ImplOrTraitItems(DefId { krate: 2, node: DefIndex(7) }) -> StabilityCheck
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> Reachability
+MetaData(DefId { krate: 1, node: DefIndex(12) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+Krate -> TransInlinedItem(DefId { krate: 2, node: DefIndex(7) })
+ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar }) -> BorrowCheck(DefId { krate: 0, node: DefIndex(5) => bar })
+Krate -> PluginRegistrar
+TypeckItemBody(DefId { krate: 0, node: DefIndex(5) => bar }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> LateLintCheck
+TransCrateItem(DefId { krate: 0, node: DefIndex(3) => core }) -> TransCrate
+TransCrateItem(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> TransCrate
+Krate -> Reachability
+CoherenceCheckImpl(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> Coherence
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> MirMapConstruction(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar }) -> IntrinsicCheck(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> Privacy
+ItemSignature(DefId { krate: 2, node: DefIndex(7) }) -> TypeckItemBody(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> CoherenceOverlapCheckSpecial(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> ItemSignature(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+Krate -> Privacy
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> MetaData(DefId { krate: 0, node: DefIndex(0) =>  })
+ItemSignature(DefId { krate: 2, node: DefIndex(7) }) -> IntrinsicCheck(DefId { krate: 0, node: DefIndex(5) => bar })
+MetaData(DefId { krate: 1, node: DefIndex(2) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar }) -> TypeckItemBody(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> CoherenceCheckImpl(DefId { krate: 0, node: DefIndex(3) => core })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> Privacy
+Hir(DefId { krate: 0, node: DefIndex(7) => crate1::some_code }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+TraitImpls(DefId { krate: 1, node: DefIndex(15) }) -> CheckConst(DefId { krate: 0, node: DefIndex(5) => bar })
+MetaData(DefId { krate: 1, node: DefIndex(33) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> IntrinsicCheck(DefId { krate: 0, node: DefIndex(4) => crate1 })
+MetaData(DefId { krate: 1, node: DefIndex(10) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+TransInlinedItem(DefId { krate: 2, node: DefIndex(7) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+MetaData(DefId { krate: 1, node: DefIndex(16) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> MatchCheck(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> MirMapConstruction(DefId { krate: 0, node: DefIndex(3) => core })
+ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar }) -> MirMapConstruction(DefId { krate: 0, node: DefIndex(5) => bar })
+Krate -> CheckLoops
+ItemSignature(DefId { krate: 2, node: DefIndex(7) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+ReprHints(DefId { krate: 2, node: DefIndex(4) }) -> ItemSignature(DefId { krate: 2, node: DefIndex(4) })
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> StabilityCheck
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> StabilityCheck
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> StabilityCheck
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> StabilityIndex
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> DeadCheck
+TypeckItemBody(DefId { krate: 0, node: DefIndex(3) => core }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(3) => core })
+ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar }) -> CheckConst(DefId { krate: 0, node: DefIndex(5) => bar })
+MetaData(DefId { krate: 2, node: DefIndex(7) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+CoherenceCheckImpl(DefId { krate: 0, node: DefIndex(5) => bar }) -> Coherence
+CoherenceOrphanCheck(DefId { krate: 0, node: DefIndex(5) => bar }) -> Coherence
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+Krate -> DeadCheck
+TraitSelect(DefId { krate: 1, node: DefIndex(9) }) -> TypeckItemBody(DefId { krate: 0, node: DefIndex(5) => bar })
+FieldTy(DefId { krate: 2, node: DefIndex(5) }) -> TraitSelect(DefId { krate: 1, node: DefIndex(9) })
+MetaData(DefId { krate: 1, node: DefIndex(3) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+MetaData(DefId { krate: 2, node: DefIndex(0) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar }) -> WfCheck(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> TypeckItemBody(DefId { krate: 0, node: DefIndex(3) => core })
+TypeckItemBody(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> WfCheck(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> BorrowCheck(DefId { krate: 0, node: DefIndex(4) => crate1 })
+CollectItem(DefId { krate: 0, node: DefIndex(5) => bar }) -> ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar })
+MetaData(DefId { krate: 2, node: DefIndex(7) }) -> CheckConst(DefId { krate: 0, node: DefIndex(5) => bar })
+Krate -> CheckStaticRecursion
+ItemSignature(DefId { krate: 0, node: DefIndex(7) => crate1::some_code }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+TraitImpls(DefId { krate: 1, node: DefIndex(15) }) -> Coherence
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> RvalueCheck(DefId { krate: 0, node: DefIndex(3) => core })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> CheckConst(DefId { krate: 0, node: DefIndex(3) => core })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> RvalueCheck(DefId { krate: 0, node: DefIndex(5) => bar })
+MetaData(DefId { krate: 2, node: DefIndex(4) }) -> ItemSignature(DefId { krate: 2, node: DefIndex(4) })
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> LateLintCheck
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> LateLintCheck
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> WfCheck(DefId { krate: 0, node: DefIndex(4) => crate1 })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> StabilityIndex
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> ItemSignature(DefId { krate: 0, node: DefIndex(3) => core })
+CoherenceOverlapCheckSpecial(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> Coherence
+ItemSignature(DefId { krate: 2, node: DefIndex(4) }) -> FieldTy(DefId { krate: 2, node: DefIndex(5) })
+CoherenceOverlapCheckSpecial(DefId { krate: 0, node: DefIndex(3) => core }) -> Coherence
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> IntrinsicCheck(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar }) -> RvalueCheck(DefId { krate: 0, node: DefIndex(5) => bar })
+ItemSignature(DefId { krate: 1, node: DefIndex(15) }) -> Coherence
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> RvalueCheck(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+MetaData(DefId { krate: 1, node: DefIndex(52) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> Resolve
+CoherenceOverlapCheckSpecial(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> Coherence
+ImplOrTraitItems(DefId { krate: 2, node: DefIndex(0) }) -> StabilityCheck
+CoherenceOrphanCheck(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> Coherence
+MetaData(DefId { krate: 2, node: DefIndex(4) }) -> Resolve
+MetaData(DefId { krate: 2, node: DefIndex(0) }) -> StabilityCheck
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> Resolve
+MetaData(DefId { krate: 1, node: DefIndex(15) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> TypeckItemBody(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(3) => core }) -> Resolve
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> CheckConst(DefId { krate: 0, node: DefIndex(4) => crate1 })
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> MatchCheck(DefId { krate: 0, node: DefIndex(4) => crate1 })
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> CheckConst(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> CollectItem(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+Krate -> ResolveLifetimes
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> CoherenceOverlapCheckSpecial(DefId { krate: 0, node: DefIndex(4) => crate1 })
+CoherenceOrphanCheck(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> Coherence
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> StabilityIndex
+CoherenceCheckImpl(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> Coherence
+MetaData(DefId { krate: 2, node: DefIndex(4) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+CoherenceOrphanCheck(DefId { krate: 0, node: DefIndex(3) => core }) -> Coherence
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> MirMapConstruction(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> CheckConst(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+Krate -> CollectLanguageItems
+ItemSignature(DefId { krate: 0, node: DefIndex(5) => bar }) -> MatchCheck(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> ItemSignature(DefId { krate: 0, node: DefIndex(4) => crate1 })
+ItemSignature(DefId { krate: 2, node: DefIndex(7) }) -> TransInlinedItem(DefId { krate: 2, node: DefIndex(7) })
+FieldTy(DefId { krate: 2, node: DefIndex(5) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+MetaData(DefId { krate: 2, node: DefIndex(7) }) -> ItemSignature(DefId { krate: 2, node: DefIndex(7) })
+MetaData(DefId { krate: 1, node: DefIndex(51) }) -> TransCrateItem(DefId { krate: 0, node: DefIndex(5) => bar })
+Hir(DefId { krate: 0, node: DefIndex(4) => crate1 }) -> TypeckItemType(DefId { krate: 0, node: DefIndex(4) => crate1 })
+ImplOrTraitItems(DefId { krate: 2, node: DefIndex(0) }) -> LateLintCheck
+MetaData(DefId { krate: 2, node: DefIndex(7) }) -> StabilityCheck
+Hir(DefId { krate: 0, node: DefIndex(2) => {{?}} }) -> WfCheck(DefId { krate: 0, node: DefIndex(2) => {{?}} })
+Krate -> Coherence
+Hir(DefId { krate: 0, node: DefIndex(5) => bar }) -> IntrinsicCheck(DefId { krate: 0, node: DefIndex(5) => bar })

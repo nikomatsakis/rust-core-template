@@ -1,0 +1,248 @@
+DEBUG:rustc::middle::infer: normalize_if_possible(<Self as code::IntoIterator>::IntoIter)
+DEBUG:rustc::middle::traits::project: opt_normalize_projection_type(projection_ty=ProjectionTy { trait_ref: <Self as code::IntoIterator>, item_name: IntoIter(128) }, depth=0)
+DEBUG:rustc::middle::traits::project: project(obligation=Obligation(predicate=ProjectionTy { trait_ref: <Self as code::IntoIterator>, item_name: IntoIter(128) },depth=0))
+DEBUG:rustc::middle::traits::project: project: obligation_trait_ref=<Self as code::IntoIterator>
+DEBUG:rustc::middle::traits::project: assemble_candidates_from_param_env(..)
+DEBUG:rustc::middle::traits::project: assemble_candidates_from_predicates(obligation=Obligation(predicate=ProjectionTy { trait_ref: <Self as code::IntoIterator>, item_name: IntoIter(128) },depth=0))
+DEBUG:rustc::middle::traits::project: assemble_candidates_from_predicates: predicate=Binder(TraitPredicate(<Self as code::IntoIterator>))
+DEBUG:rustc::middle::traits::project: assemble_candidates_from_predicates: predicate=Binder(ProjectionPredicate(ProjectionTy { trait_ref: <<Self as code::IntoIterator>::IntoIter as code::Iterator>, item_name: Item(125) }, <Self as code::IntoIterator>::Item))
+DEBUG:rustc::middle::traits::project: assemble_candidates_from_predicates: candidate=Binder(ProjectionPredicate(ProjectionTy { trait_ref: <<Self as code::IntoIterator>::IntoIter as code::Iterator>, item_name: Item(125) }, <Self as code::IntoIterator>::Item)) is_match=false same_name=false
+DEBUG:rustc::middle::traits::project: assemble_candidates_from_predicates: predicate=Binder(TraitPredicate(<<Self as code::IntoIterator>::IntoIter as code::Iterator>))
+DEBUG:rustc::middle::traits::project: assemble_candidates_from_predicates: predicate=Binder(TraitPredicate(<<Self as code::IntoIterator>::IntoIter as marker::Sized>))
+DEBUG:rustc::middle::traits::project: assemble_candidates_from_predicates: predicate=Binder(TraitPredicate(<<Self as code::IntoIterator>::Item as marker::Sized>))
+DEBUG:rustc::middle::traits::project: assemble_candidates_from_trait_def(..)
+DEBUG:rustc::middle::traits::select: select(Obligation(predicate=Binder(TraitPredicate(<Self as code::IntoIterator>)),depth=0))
+DEBUG:rustc::middle::traits::select: candidate_from_obligation(cache_fresh_trait_pred=Binder(TraitPredicate(<Self as code::IntoIterator>)), obligation=TraitObligationStack(Obligation(predicate=Binder(TraitPredicate(<Self as code::IntoIterator>)),depth=0)))
+DEBUG:rustc::middle::traits::select: is_knowable(intercrate=false)
+DEBUG:rustc::middle::traits::select: assemble_candidates_from_impls(obligation=Obligation(predicate=Binder(TraitPredicate(<Self as code::IntoIterator>)),depth=0))
+DEBUG:rustc::middle::infer: probe()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(6)
+DEBUG:rustc::middle::infer::higher_ranked: skolemize_bound_regions(binder=Binder(TraitPredicate(<Self as code::IntoIterator>)), result=TraitPredicate(<Self as code::IntoIterator>), map={})
+DEBUG:rustc::middle::traits::select: match_impl(impl_def_id=DefId { krate: 0, node: DefIndex(45) => code::I.IntoIterator }, obligation=Obligation(predicate=Binder(TraitPredicate(<Self as code::IntoIterator>)),depth=0), impl_trait_ref=Normalized(<_ as code::IntoIterator>,[]), skol_obligation_trait_ref=<Self as code::IntoIterator>)
+DEBUG:rustc::middle::infer: eq_trait_refs(<_ as code::IntoIterator> <: <Self as code::IntoIterator>)
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(7)
+DEBUG:rustc::middle::infer::equate: Equate.tys(_, Self)
+DEBUG:rustc::middle::infer: normalize_if_possible(_)
+DEBUG:rustc::middle::infer: normalize_if_possible(Self)
+DEBUG:rustc::middle::infer::combine: instantiate(a_ty=Self dir=EqTo b_vid=_#1t)
+DEBUG:rustc::middle::infer::combine: instantiate(a_ty=Self, dir=EqTo, b_vid=_#1t, generalized_ty=Self)
+DEBUG:rustc::middle::infer::equate: Equate.tys(Self, Self)
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = true
+DEBUG:rustc::middle::infer: commit_from!
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: commit(7)
+DEBUG:rustc::middle::infer::higher_ranked: leak_check: skol_map={}
+DEBUG:rustc::middle::infer::type_variable: actions_since_snapshot.len() = 4
+DEBUG:rustc::middle::infer::type_variable: NewElem(1) new_elem_threshold=1
+DEBUG:rustc::middle::infer::type_variable: SpecifyVar(_#1t) new_elem_threshold=1
+DEBUG:rustc::middle::infer::higher_ranked: region_vars_confined_to_snapshot: region_vars=[] escaping_types=[]
+DEBUG:rustc::middle::traits::select: match_impl: success impl_substs=Substs[types=[[_];[];[]], regions=[[];[];[]]]
+DEBUG:rustc::middle::infer: rollback_to(cause=probe)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=6,skolemization=0))
+DEBUG:rustc::middle::traits::select: assemble_candidates_from_object_ty(self_ty=Self)
+DEBUG:rustc::middle::traits::object_safety: is_object_safe(DefId { krate: 0, node: DefIndex(40) => code::IntoIterator }) = true
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(6)
+DEBUG:rustc::middle::infer::higher_ranked: skolemize_bound_regions(binder=Binder(Self), result=Self, map={})
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = true
+DEBUG:rustc::middle::infer: commit_from!
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: commit(6)
+DEBUG:rustc::middle::traits::select: assemble_candidates_for_projected_tys(Obligation(predicate=Binder(TraitPredicate(<Self as code::IntoIterator>)),depth=0))
+DEBUG:rustc::middle::traits::select: assemble_candidates_from_caller_bounds(Obligation(predicate=Binder(TraitPredicate(<Self as code::IntoIterator>)),depth=0))
+DEBUG:rustc::middle::infer: probe()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(7)
+DEBUG:rustc::middle::traits::select: match_poly_trait_ref: obligation=Obligation(predicate=Binder(TraitPredicate(<Self as code::IntoIterator>)),depth=0) poly_trait_ref=Binder(<Self as code::IntoIterator>)
+DEBUG:rustc::middle::infer: sub_poly_trait_refs(Binder(<Self as code::IntoIterator>) <: Binder(<Self as code::IntoIterator>))
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(8)
+DEBUG:rustc::middle::infer::higher_ranked: higher_ranked_sub(a=Binder(<Self as code::IntoIterator>), b=Binder(<Self as code::IntoIterator>))
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(9)
+DEBUG:rustc::middle::infer::higher_ranked: skolemize_bound_regions(binder=Binder(<Self as code::IntoIterator>), result=<Self as code::IntoIterator>, map={})
+DEBUG:rustc::middle::infer::higher_ranked: a_prime=<Self as code::IntoIterator>
+DEBUG:rustc::middle::infer::higher_ranked: b_prime=<Self as code::IntoIterator>
+DEBUG:rustc::middle::infer::equate: Equate.tys(Self, Self)
+DEBUG:rustc::middle::infer::higher_ranked: leak_check: skol_map={}
+DEBUG:rustc::middle::infer::type_variable: actions_since_snapshot.len() = 1
+DEBUG:rustc::middle::infer::higher_ranked: region_vars_confined_to_snapshot: region_vars=[] escaping_types=[]
+DEBUG:rustc::middle::infer::higher_ranked: higher_ranked_sub: OK result=RelateOk { value: <Self as code::IntoIterator>, obligations: [] }
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = true
+DEBUG:rustc::middle::infer: commit_from!
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: commit(9)
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = true
+DEBUG:rustc::middle::infer: commit_from!
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: commit(8)
+DEBUG:rustc::middle::infer: rollback_to(cause=probe)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=7,skolemization=0))
+DEBUG:rustc::middle::infer: probe()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(7)
+DEBUG:rustc::middle::traits::select: match_poly_trait_ref: obligation=Obligation(predicate=Binder(TraitPredicate(<Self as code::IntoIterator>)),depth=0) poly_trait_ref=Binder(<<Self as code::IntoIterator>::IntoIter as code::Iterator>)
+DEBUG:rustc::middle::infer: sub_poly_trait_refs(Binder(<<Self as code::IntoIterator>::IntoIter as code::Iterator>) <: Binder(<Self as code::IntoIterator>))
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(8)
+DEBUG:rustc::middle::infer::higher_ranked: higher_ranked_sub(a=Binder(<<Self as code::IntoIterator>::IntoIter as code::Iterator>), b=Binder(<Self as code::IntoIterator>))
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(9)
+DEBUG:rustc::middle::infer::higher_ranked: skolemize_bound_regions(binder=Binder(<Self as code::IntoIterator>), result=<Self as code::IntoIterator>, map={})
+DEBUG:rustc::middle::infer::higher_ranked: a_prime=<<Self as code::IntoIterator>::IntoIter as code::Iterator>
+DEBUG:rustc::middle::infer::higher_ranked: b_prime=<Self as code::IntoIterator>
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = false
+DEBUG:rustc::middle::infer: rollback_to(cause=commit_if_ok -- error)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=9,skolemization=0))
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = false
+DEBUG:rustc::middle::infer: rollback_to(cause=commit_if_ok -- error)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=8,skolemization=0))
+DEBUG:rustc::middle::infer: rollback_to(cause=probe)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=7,skolemization=0))
+DEBUG:rustc::middle::infer: probe()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(7)
+DEBUG:rustc::middle::traits::select: match_poly_trait_ref: obligation=Obligation(predicate=Binder(TraitPredicate(<Self as code::IntoIterator>)),depth=0) poly_trait_ref=Binder(<<Self as code::IntoIterator>::IntoIter as marker::Sized>)
+DEBUG:rustc::middle::infer: sub_poly_trait_refs(Binder(<<Self as code::IntoIterator>::IntoIter as marker::Sized>) <: Binder(<Self as code::IntoIterator>))
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(8)
+DEBUG:rustc::middle::infer::higher_ranked: higher_ranked_sub(a=Binder(<<Self as code::IntoIterator>::IntoIter as marker::Sized>), b=Binder(<Self as code::IntoIterator>))
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(9)
+DEBUG:rustc::middle::infer::higher_ranked: skolemize_bound_regions(binder=Binder(<Self as code::IntoIterator>), result=<Self as code::IntoIterator>, map={})
+DEBUG:rustc::middle::infer::higher_ranked: a_prime=<<Self as code::IntoIterator>::IntoIter as marker::Sized>
+DEBUG:rustc::middle::infer::higher_ranked: b_prime=<Self as code::IntoIterator>
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = false
+DEBUG:rustc::middle::infer: rollback_to(cause=commit_if_ok -- error)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=9,skolemization=0))
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = false
+DEBUG:rustc::middle::infer: rollback_to(cause=commit_if_ok -- error)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=8,skolemization=0))
+DEBUG:rustc::middle::infer: rollback_to(cause=probe)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=7,skolemization=0))
+DEBUG:rustc::middle::infer: probe()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(7)
+DEBUG:rustc::middle::traits::select: match_poly_trait_ref: obligation=Obligation(predicate=Binder(TraitPredicate(<Self as code::IntoIterator>)),depth=0) poly_trait_ref=Binder(<<Self as code::IntoIterator>::Item as marker::Sized>)
+DEBUG:rustc::middle::infer: sub_poly_trait_refs(Binder(<<Self as code::IntoIterator>::Item as marker::Sized>) <: Binder(<Self as code::IntoIterator>))
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(8)
+DEBUG:rustc::middle::infer::higher_ranked: higher_ranked_sub(a=Binder(<<Self as code::IntoIterator>::Item as marker::Sized>), b=Binder(<Self as code::IntoIterator>))
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(9)
+DEBUG:rustc::middle::infer::higher_ranked: skolemize_bound_regions(binder=Binder(<Self as code::IntoIterator>), result=<Self as code::IntoIterator>, map={})
+DEBUG:rustc::middle::infer::higher_ranked: a_prime=<<Self as code::IntoIterator>::Item as marker::Sized>
+DEBUG:rustc::middle::infer::higher_ranked: b_prime=<Self as code::IntoIterator>
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = false
+DEBUG:rustc::middle::infer: rollback_to(cause=commit_if_ok -- error)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=9,skolemization=0))
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = false
+DEBUG:rustc::middle::infer: rollback_to(cause=commit_if_ok -- error)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=8,skolemization=0))
+DEBUG:rustc::middle::infer: rollback_to(cause=probe)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=7,skolemization=0))
+DEBUG:rustc::middle::traits::select: candidate list size: 2
+DEBUG:rustc::middle::traits::select: assembled 2 candidates for TraitObligationStack(Obligation(predicate=Binder(TraitPredicate(<Self as code::IntoIterator>)),depth=0)): [ImplCandidate(DefId { krate: 0, node: DefIndex(45) => code::I.IntoIterator }), ParamCandidate(Binder(<Self as code::IntoIterator>))]
+DEBUG:rustc::middle::traits::select: evaluate_candidate: depth=0 candidate=ImplCandidate(DefId { krate: 0, node: DefIndex(45) => code::I.IntoIterator })
+DEBUG:rustc::middle::infer: probe()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(7)
+DEBUG:rustc::middle::traits::select: confirm_candidate(Obligation(predicate=Binder(TraitPredicate(<Self as code::IntoIterator>)),depth=0), ImplCandidate(DefId { krate: 0, node: DefIndex(45) => code::I.IntoIterator }))
+DEBUG:rustc::middle::traits::select: confirm_impl_candidate(Obligation(predicate=Binder(TraitPredicate(<Self as code::IntoIterator>)),depth=0),DefId { krate: 0, node: DefIndex(45) => code::I.IntoIterator })
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(8)
+DEBUG:rustc::middle::infer::higher_ranked: skolemize_bound_regions(binder=Binder(TraitPredicate(<Self as code::IntoIterator>)), result=TraitPredicate(<Self as code::IntoIterator>), map={})
+DEBUG:rustc::middle::traits::select: match_impl(impl_def_id=DefId { krate: 0, node: DefIndex(45) => code::I.IntoIterator }, obligation=Obligation(predicate=Binder(TraitPredicate(<Self as code::IntoIterator>)),depth=0), impl_trait_ref=Normalized(<_ as code::IntoIterator>,[]), skol_obligation_trait_ref=<Self as code::IntoIterator>)
+DEBUG:rustc::middle::infer: eq_trait_refs(<_ as code::IntoIterator> <: <Self as code::IntoIterator>)
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(9)
+DEBUG:rustc::middle::infer::equate: Equate.tys(_, Self)
+DEBUG:rustc::middle::infer: normalize_if_possible(_)
+DEBUG:rustc::middle::infer: normalize_if_possible(Self)
+DEBUG:rustc::middle::infer::combine: instantiate(a_ty=Self dir=EqTo b_vid=_#1t)
+DEBUG:rustc::middle::infer::combine: instantiate(a_ty=Self, dir=EqTo, b_vid=_#1t, generalized_ty=Self)
+DEBUG:rustc::middle::infer::equate: Equate.tys(Self, Self)
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = true
+DEBUG:rustc::middle::infer: commit_from!
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: commit(9)
+DEBUG:rustc::middle::infer::higher_ranked: leak_check: skol_map={}
+DEBUG:rustc::middle::infer::type_variable: actions_since_snapshot.len() = 4
+DEBUG:rustc::middle::infer::type_variable: NewElem(1) new_elem_threshold=1
+DEBUG:rustc::middle::infer::type_variable: SpecifyVar(_#1t) new_elem_threshold=1
+DEBUG:rustc::middle::infer::higher_ranked: region_vars_confined_to_snapshot: region_vars=[] escaping_types=[]
+DEBUG:rustc::middle::traits::select: match_impl: success impl_substs=Substs[types=[[_];[];[]], regions=[[];[];[]]]
+DEBUG:rustc::middle::traits::select: confirm_impl_candidate substs=Normalized(Substs[types=[[_];[];[]], regions=[[];[];[]]],[])
+DEBUG:rustc::middle::traits::select: vtable_impl(impl_def_id=DefId { krate: 0, node: DefIndex(45) => code::I.IntoIterator }, substs=Normalized(Substs[types=[[_];[];[]], regions=[[];[];[]]],[]), recursion_depth=1, skol_map={})
+DEBUG:rustc::middle::traits::select: impl_or_trait_obligations(def_id=DefId { krate: 0, node: DefIndex(45) => code::I.IntoIterator })
+DEBUG:rustc::middle::infer::higher_ranked: leak_check: skol_map={}
+DEBUG:rustc::middle::infer::type_variable: actions_since_snapshot.len() = 4
+DEBUG:rustc::middle::infer::type_variable: NewElem(1) new_elem_threshold=1
+DEBUG:rustc::middle::infer::type_variable: SpecifyVar(_#1t) new_elem_threshold=1
+DEBUG:rustc::middle::infer::higher_ranked: region_vars_confined_to_snapshot: region_vars=[] escaping_types=[]
+DEBUG:rustc::middle::infer::higher_ranked: plug_leaks(skol_map={}, value=[Obligation(predicate=Binder(TraitPredicate(<Self as marker::Sized>)),depth=1), Obligation(predicate=Binder(TraitPredicate(<Self as code::Iterator>)),depth=1)])
+DEBUG:rustc::middle::infer::higher_ranked: plug_leaks: inv_skol_map={}
+DEBUG:rustc::middle::infer::higher_ranked: plug_leaks: result=[Obligation(predicate=Binder(TraitPredicate(<Self as marker::Sized>)),depth=1), Obligation(predicate=Binder(TraitPredicate(<Self as code::Iterator>)),depth=1)]
+DEBUG:rustc::middle::traits::select: vtable_impl: impl_def_id=DefId { krate: 0, node: DefIndex(45) => code::I.IntoIterator } impl_obligations=[Obligation(predicate=Binder(TraitPredicate(<Self as marker::Sized>)),depth=1), Obligation(predicate=Binder(TraitPredicate(<Self as code::Iterator>)),depth=1)]
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = true
+DEBUG:rustc::middle::infer: commit_from!
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: commit(8)
+DEBUG:rustc::middle::traits::select: evaluate_predicate_recursively(Obligation(predicate=Binder(TraitPredicate(<Self as marker::Sized>)),depth=1))
+DEBUG:rustc::middle::traits::select: evaluate_obligation_recursively(Obligation(predicate=Binder(TraitPredicate(<Self as marker::Sized>)),depth=1))
+DEBUG:rustc::middle::traits::select: candidate_from_obligation(cache_fresh_trait_pred=Binder(TraitPredicate(<Self as marker::Sized>)), obligation=TraitObligationStack(Obligation(predicate=Binder(TraitPredicate(<Self as marker::Sized>)),depth=1)))
+DEBUG:rustc::middle::traits::select: is_knowable(intercrate=false)
+DEBUG:rustc::middle::traits::select: assemble_candidates_for_projected_tys(Obligation(predicate=Binder(TraitPredicate(<Self as marker::Sized>)),depth=1))
+DEBUG:rustc::middle::traits::select: assemble_candidates_from_caller_bounds(Obligation(predicate=Binder(TraitPredicate(<Self as marker::Sized>)),depth=1))
+DEBUG:rustc::middle::infer: probe()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(10)
+DEBUG:rustc::middle::traits::select: match_poly_trait_ref: obligation=Obligation(predicate=Binder(TraitPredicate(<Self as marker::Sized>)),depth=1) poly_trait_ref=Binder(<Self as code::IntoIterator>)
+DEBUG:rustc::middle::infer: sub_poly_trait_refs(Binder(<Self as code::IntoIterator>) <: Binder(<Self as marker::Sized>))
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(11)
+DEBUG:rustc::middle::infer::higher_ranked: higher_ranked_sub(a=Binder(<Self as code::IntoIterator>), b=Binder(<Self as marker::Sized>))
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(12)
+DEBUG:rustc::middle::infer::higher_ranked: skolemize_bound_regions(binder=Binder(<Self as marker::Sized>), result=<Self as marker::Sized>, map={})
+DEBUG:rustc::middle::infer::higher_ranked: a_prime=<Self as code::IntoIterator>
+DEBUG:rustc::middle::infer::higher_ranked: b_prime=<Self as marker::Sized>
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = false
+DEBUG:rustc::middle::infer: rollback_to(cause=commit_if_ok -- error)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=12,skolemization=0))
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = false
+DEBUG:rustc::middle::infer: rollback_to(cause=commit_if_ok -- error)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=11,skolemization=0))
+DEBUG:rustc::middle::infer: rollback_to(cause=probe)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=10,skolemization=0))
+DEBUG:rustc::middle::infer: probe()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(10)
+DEBUG:rustc::middle::traits::select: match_poly_trait_ref: obligation=Obligation(predicate=Binder(TraitPredicate(<Self as marker::Sized>)),depth=1) poly_trait_ref=Binder(<<Self as code::IntoIterator>::IntoIter as code::Iterator>)
+DEBUG:rustc::middle::infer: sub_poly_trait_refs(Binder(<<Self as code::IntoIterator>::IntoIter as code::Iterator>) <: Binder(<Self as marker::Sized>))
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(11)
+DEBUG:rustc::middle::infer::higher_ranked: higher_ranked_sub(a=Binder(<<Self as code::IntoIterator>::IntoIter as code::Iterator>), b=Binder(<Self as marker::Sized>))
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(12)
+DEBUG:rustc::middle::infer::higher_ranked: skolemize_bound_regions(binder=Binder(<Self as marker::Sized>), result=<Self as marker::Sized>, map={})
+DEBUG:rustc::middle::infer::higher_ranked: a_prime=<<Self as code::IntoIterator>::IntoIter as code::Iterator>
+DEBUG:rustc::middle::infer::higher_ranked: b_prime=<Self as marker::Sized>
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = false
+DEBUG:rustc::middle::infer: rollback_to(cause=commit_if_ok -- error)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=12,skolemization=0))
+DEBUG:rustc::middle::infer: commit_if_ok() -- r.is_ok() = false
+DEBUG:rustc::middle::infer: rollback_to(cause=commit_if_ok -- error)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=11,skolemization=0))
+DEBUG:rustc::middle::infer: rollback_to(cause=probe)
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: rollback_to(RegionSnapshot(length=10,skolemization=0))
+DEBUG:rustc::middle::infer: probe()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(10)
+DEBUG:rustc::middle::traits::select: match_poly_trait_ref: obligation=Obligation(predicate=Binder(TraitPredicate(<Self as marker::Sized>)),depth=1) poly_trait_ref=Binder(<<Self as code::IntoIterator>::IntoIter as marker::Sized>)
+DEBUG:rustc::middle::infer: sub_poly_trait_refs(Binder(<<Self as code::IntoIterator>::IntoIter as marker::Sized>) <: Binder(<Self as marker::Sized>))
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(11)
+DEBUG:rustc::middle::infer::higher_ranked: higher_ranked_sub(a=Binder(<<Self as code::IntoIterator>::IntoIter as marker::Sized>), b=Binder(<Self as marker::Sized>))
+DEBUG:rustc::middle::infer: commit_if_ok()
+DEBUG:rustc::middle::infer::region_inference: RegionVarBindings: start_snapshot(12)
+DEBUG:rustc::middle::infer::higher_ranked: skolemize_bound_regions(binder=Binder(<Self as marker::Sized>), result=<Self as marker::Sized>, map={})
+DEBUG:rustc::middle::infer::higher_ranked: a_prime=<<Self as code::IntoIterator>::IntoIter as marker::Sized>
+DEBUG:rustc::middle::infer::higher_ranked: b_prime=<Self as marker::Sized>
+DEBUG:rustc::middle::infer::equate: Equate.tys(<Self as code::IntoIterator>::IntoIter, Self)
+DEBUG:rustc::middle::infer: normalize_if_possible(<Self as code::IntoIterator>::IntoIter)
+error: internal compiler error: unexpected panic
+note: the compiler unexpectedly panicked. this is a bug.
+note: we would appreciate a bug report: https://github.com/rust-lang/rust/blob/master/CONTRIBUTING.md#bug-reports
+note: run with `RUST_BACKTRACE=1` for a backtrace
+thread 'rustc' panicked at 'NESTED', ../src/librustc/middle/infer/mod.rs:1551
+note: Run with `RUST_BACKTRACE=1` for a backtrace.
+
+                                   
