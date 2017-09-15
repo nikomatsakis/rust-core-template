@@ -1,7 +1,6 @@
 #![no_core]
 #![feature(lang_items)]
 #![feature(fundamental)]
-#![feature(reflect)]
 #![feature(no_core)]
 #![feature(optin_builtin_traits)]
 #![feature(unboxed_closures)]
@@ -12,6 +11,6 @@
 pub mod marker;
 // mod ops;
 // mod option;
-mod code;
+// mod code;
 
 pub mod prelude { pub mod v1 { } }

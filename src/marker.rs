@@ -29,10 +29,10 @@ pub unsafe trait Send {
     // empty.
 }
 
-unsafe impl Send for .. { }
-
-impl<T> !Send for *const T { }
-impl<T> !Send for *mut T { }
+//unsafe impl Send for .. { }
+//
+//impl<T> !Send for *const T { }
+//impl<T> !Send for *mut T { }
 
 /// Types with a constant size known at compile-time.
 #[lang = "sized"]
@@ -70,10 +70,10 @@ pub unsafe trait Sync {
     // Empty
 }
 
-unsafe impl Sync for .. { }
-
-impl<T> !Sync for *const T { }
-impl<T> !Sync for *mut T { }
+//unsafe impl Sync for .. { }
+//
+//impl<T> !Sync for *const T { }
+//impl<T> !Sync for *mut T { }
 
 #[lang = "phantom_data"]
 pub struct PhantomData<T:?Sized>;
@@ -85,8 +85,7 @@ mod impls {
     unsafe impl<'a, T: Send + ?Sized> Send for &'a mut T {}
 }
 
-#[rustc_reflect_like]
-#[allow(deprecated)]
-pub trait Reflect {}
-
-impl Reflect for .. { }
+#[lang="coerce_unsized"]
+pub trait CoerceUnsized<T> {
+    // Empty.
+}
